@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Registaration Form</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <script type="text/javascript"  src="index.js"></script>
+        <script src="http://ifreakz.com/projects/yoga/web/js/jquery-3.2.1.min.js"></script>
+        <link rel="bootstrap" href="css/bootstrap.css" >
+
+        <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+
+        <script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    </head>
+       
+    <body align="center">
+        <form   >
+        <h1>Student Registration Form</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <label for="fname">First Name:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="fname" name="firstname" placeholder="Enter your first name" class="form-control">
+                </div>
+                <span id="fname_span"></span>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="lname">Last Name:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="lname" name="lastname" placeholder="Enter your last name" autofocus="" class="form-control">
+                </div>
+                <span id="lname_span"></span>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="email">Email:</label>
+                </div>
+                <div class="col-90">
+                    <input type="email" id="email" name="email" placeholder="it should contain @,." autofocus="" class="form-control">
+                </div>
+                <span id="email_span"></span>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="password">Password:</label>
+                </div>
+                <div class="col-90">
+                    <input type="password" id="pwd"  name="password1" placeholder="Password here" autofocus="" onkeyup="myfun7()" class="form-control">
+                </div>
+              <p id="pwdlen"> </p>
+              <p id="pwd_span"></p>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="password">Confirm Password:</label>
+                </div>
+                <div class="col-90">
+                    <input type="password"  id="cnfpwd" minlength="8"  placeholder="Confirm Password" class="form-control" >
+                </div>
+                <span id="msg"></span>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="mobile">Mobile:</label>
+                </div>
+                
+                <div class="col-90">
+                    <input name="phone" type="text" id="phone"  style="width:120%" maxlength="10" class="form-control"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="gender" required>Gender:</label>
+                </div>
+                <div class="col-90">
+                    <input type="radio" id="male" name="gender" value="male" class="form-control"/>Male
+                    <input type="radio" id="female" name="gender" value="female"class="form-control"/>Female
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="dob">Date Of Birth:</label>
+                </div>
+                <div class="col-90">
+                    <input type="Date" id="dob" name="dob" required="" autofocus=""class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="address">Address:</label>
+                </div>
+                <div class="col-90">
+                    <textarea type="text" maxlength="400" class="form-control" id="uname" value="" onkeyup="myfun()" required="" autofocus=""class="form-control"></textarea>
+                    <div class="d-block">
+                        <span id="uname_span">0</span>/400
+                     </div>
+                     <meter id="uname_meter"  max="400" min="0" value=""class="form-control" ></meter>
+                </div>
+                
+
+            </div>
+            <div class="row">
+                <div class="col-10">
+                <label >Select State :</label>
+            </div>
+                <select id="countrySelect" size="1" onchange="makeSubmenu(this.value)"  required="" autofocus="" class="form-control">
+                    <option value="" disabled selected>Choose State</option>
+                    <option>Telangana</option>
+                    <option>AP</option>
+                    </select>
+            </div>
+             <div class="row">
+                <div class="col-10">
+                <label>Select City :</label>
+            </div>
+                    <select id="citySelect" size="1"  required="" autofocus="" class="form-control">
+                    <option value="" disabled selected>Choose City</option>
+                    <option></option>
+                    </select>
+                </div>
+            
+            <div class="row">
+                <div class="col-10">
+                    <label for="pincode">Area PIN:</label>
+                </div>
+                <div >
+                    <input type="pincode" id="pin" name="pin" maxlength="6" required="" autofocus="" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="qualification"  >Qualification:</label>
+                </div>
+                <div >
+                    <select name="qualification" id="qualification" required="" autofocus="" class="form-control">
+                        <option value=" ">Select Qualification:</option>
+                        <option value="Graduation">Graduation</option>
+                        <option value="BTech.">BTech.</option>
+                        <option value="MTech.">MTech.</option>
+                        <option value="MCA">MCA</option>
+                        <option value="BCA">BCA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="language">Language's Known:</label>
+                </div>
+                <div class="col-90">
+                    <input type="checkbox" id="tl" value="telugu" class="form-control">Telugu<br>
+                    <input type="checkbox" id="hi" value="Hindi" class="form-control">Hindi<br/>
+                    <input type="checkbox" id="en" value="english"class="form-control" >English<br/>
+                </div>
+            </div>
+            <div>
+                Upload Image :<br><br>
+                <input type="file" name="upload_file" class="form-control" id="photo" placeholder="Enter Name" id="upload_file" class="form-control" onchange="getImagePreview(event)" ><br><br>
+                <div id="preview"></div>
+            </div><br>
+            <div>
+                <input type="checkbox" value="agree" required="" autofocus="" class="form-control">
+             <span class="sp">I agree for the terms*  and Conditions*</span>
+            </div>
+            <br>
+            <div class="row">
+                <button type="submit" class="sub"  onclick=" SaveStudentDetails()">Submit</button>
+            </div>  
+        </div>
+    </form>
+    <script>
+            var input = document.querySelector("#phone");
+            window.intlTelInput(input, {
+                separateDialCode: true,
+                // excludeCountries: [ "il"],
+                preferredCountries: [ "in","ru", "jp", "pk", "no"]
+            });
+        </script>
+    
+    </body>
+</html>
+
