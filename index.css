@@ -5,8 +5,9 @@ body{
 }
     
 
- 
-
+ /* #phone{
+    width: 300px;
+ } */
 
 input[type=pincode],input[type=text], input[type=email], input[type=number], input[type=select], input[type=date],input[type=select],input[type=password]
 {
@@ -20,7 +21,7 @@ input[type=pincode],input[type=text], input[type=email], input[type=number], inp
 
 }
 input[type=tel]{
-    width: 70%;
+    width: 80%;
     padding: 12px;
     border: 1px solid rgb(168, 166, 166);
     border-radius: 4px;
@@ -44,10 +45,10 @@ h1{
     font-family: Arial;
     font-style: normal;
     font-weight: bold;
-    color: rgb(221, 26, 156);
+    color:darkred;
     text-align: center;
     text-decoration: underline;
-    margin-left: 20%;
+    
 }
 label{
     padding: 12px 12px 12px 0;
@@ -73,7 +74,8 @@ background-color: #32a336;
     background-color:darkgrey;
     padding: 20px;
     width:35%;
-    margin-left: 45%;;
+    margin-left: 35%;
+    /* padding-right: 30px; */
 }
 
 
@@ -91,9 +93,8 @@ background-color: #32a336;
 }
 
 @media  (max-width:480px) {
-    .col-10,.col-90,textarea,input,input[type=text], input[type=email], input[type=number], input[type=select], input[type=date],input[type=select],input[type=password], input[type=tel][type=submit]{
-        width: 100%;
-        margin-top: 0;
+    body{
+        display: block;
     }
 }
 

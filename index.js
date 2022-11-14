@@ -96,7 +96,7 @@ console.log('user ')
     fname.style.border = `1px solid #d61609`;
     status = false;
   } else {
-    fname_span.innerHTML = `${right} Thank you`;
+    fname_span.innerHTML = `${right} `;
     fname_span.style.color = " #0b0be3"
     fname.style.border = "1px solid #0b0be3";
     
@@ -112,7 +112,7 @@ console.log('user ')
     lname.style.border = `1px solid #d61609`;
     status = false;
   } else {
-    lname_span.innerHTML = `${right} Thank you`;
+    lname_span.innerHTML = `${right} `;
     lname_span.style.color= "  #0b0be3"
     lname.style.border = "1px solid #0b0be3";
     
@@ -129,12 +129,12 @@ console.log('user ')
       /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z])+\.)+([a-zA-Z]{2,4})+$/
     )
   ) {
-    email_span.innerHTML = `${worng}  Valid Email Only`;
+    email_span.innerHTML = `${worng} Please Enter a Valid Email.`;
     email_span.style.color = "#d61609";
     email_input.style.border = "1px solid #d61609";
     status = false;
   } else {
-    email_span.innerHTML = `${right} Thank you `;
+    email_span.innerHTML = `${right}  `;
     email_span.style.color = "#0b0be3";
     email_input.style.border = "1px solid #0b0be3";
     
@@ -157,7 +157,7 @@ console.log('user ')
     status = false;
   }
    else {
-    pwd_span.innerHTML = `${right} Thank you `;
+    pwd_span.innerHTML = `  `;
     pwd_span.style.color = "#0b0be3";
     pwd_input.style.border = "1px solid #0b0be3"
   }
@@ -173,7 +173,7 @@ console.log('user ')
         status= false
       }
       else if(pwd_input.value == cnfpwd.value ){
-        msg.innerHTML = ` ${right} Password Match`
+        msg.innerHTML = ` ${right} Password Matched`
         msg.style.color="#0b0be3"
         cnfpwd.style.border= "1px solid #0b0be3";
         status=false
@@ -191,7 +191,7 @@ console.log('user ')
           
          status = false
       }
-      else if(pwd_input.value.length <= 7){
+      else if(pwd_input.value.length <= 9){
         pwdlen.innerHTML = `${worng} Password is Weak`
         pwdlen.style.color="#d61609 "
          status = false

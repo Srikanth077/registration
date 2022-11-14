@@ -16,8 +16,9 @@
         <script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     </head>
        
-    <body align="center">
+    <body align="cente">
         <form   >
+           
         <h1>Student Registration Form</h1>
         <div class="container">
             <div class="row">
@@ -25,7 +26,7 @@
                     <label for="fname">First Name:</label>
                 </div>
                 <div class="col-90">
-                    <input type="text" id="fname" name="firstname" placeholder="Enter your first name" class="form-control">
+                    <input type="text" id="fname" name="firstname" placeholder="Enter your first name" class="form-control" onkeyup="SaveStudentDetails()" >
                 </div>
                 <span id="fname_span"></span>
             </div>
@@ -34,7 +35,7 @@
                     <label for="lname">Last Name:</label>
                 </div>
                 <div class="col-90">
-                    <input type="text" id="lname" name="lastname" placeholder="Enter your last name" autofocus="" class="form-control">
+                    <input type="text" id="lname" name="lastname" placeholder="Enter your last name" autofocus="" class="form-control" onkeyup="SaveStudentDetails()">
                 </div>
                 <span id="lname_span"></span>
             </div>
@@ -43,7 +44,7 @@
                     <label for="email">Email:</label>
                 </div>
                 <div class="col-90">
-                    <input type="email" id="email" name="email" placeholder="it should contain @,." autofocus="" class="form-control">
+                    <input type="email" id="email" name="email" placeholder="it should contain @,." autofocus="" class="form-control" onkeyup="SaveStudentDetails()">
                 </div>
                 <span id="email_span"></span>
             </div>
@@ -52,7 +53,7 @@
                     <label for="password">Password:</label>
                 </div>
                 <div class="col-90">
-                    <input type="password" id="pwd"  name="password1" placeholder="Password here" autofocus="" onkeyup="myfun7()" class="form-control">
+                    <input type="password" id="pwd"  name="password1" placeholder="Password here" autofocus=""onkeyup="SaveStudentDetails()" class="form-control">
                 </div>
               <p id="pwdlen"> </p>
               <p id="pwd_span"></p>
@@ -62,7 +63,7 @@
                     <label for="password">Confirm Password:</label>
                 </div>
                 <div class="col-90">
-                    <input type="password"  id="cnfpwd" minlength="8"  placeholder="Confirm Password" class="form-control" >
+                    <input type="password"  id="cnfpwd" minlength="8"  placeholder="Confirm Password" class="form-control"  onkeyup="SaveStudentDetails()">
                 </div>
                 <span id="msg"></span>
             </div>
@@ -72,7 +73,7 @@
                 </div>
                 
                 <div class="col-90">
-                    <input name="phone" type="text" id="phone"  style="width:120%" maxlength="10" class="form-control"/>
+                    <input name="phone" type="text" id="phone"  style="width:110%" maxlength="10" class="form-control"/>
                 </div>
             </div>
             <div class="row">
@@ -141,10 +142,11 @@
                 <div >
                     <select name="qualification" id="qualification" required="" autofocus="" class="form-control">
                         <option value=" ">Select Qualification:</option>
+                        <option value=" ">Not specified</option>
                         <option value="Graduation">Graduation</option>
-                        <option value="BTech.">BTech.</option>
-                        <option value="MTech.">MTech.</option>
-                        <option value="MCA">MCA</option>
+                        <option value="BTech.">B.Tech</option>
+                        <option value="MTech.">B.sc</option>
+                        <option value="MCA">B.com</option>
                         <option value="BCA">BCA</option>
                     </select>
                 </div>
@@ -175,13 +177,13 @@
         </div>
     </form>
     <script>
-            var input = document.querySelector("#phone");
-            window.intlTelInput(input, {
-                separateDialCode: true,
-                // excludeCountries: [ "il"],
-                preferredCountries: [ "in","ru", "jp", "pk", "no"]
-            });
-        </script>
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            separateDialCode: true,
+            // excludeCountries: [ "il"],
+            preferredCountries: [ "in","ru", "jp", "pk", "no"]
+        });
+    </script>
     
     </body>
 </html>
